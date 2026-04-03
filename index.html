@@ -3,68 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ML Portfolio | [Your Name]</title>
+    <title>ML Specialist | Academic & Industrial Portfolio</title>
     <script src="https://tailwindcss.com"></script>
+    <link href="https://googleapis.com" rel="stylesheet">
     <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; transition: 0.3s; }
-        .card:hover { border-color: #38bdf8; transform: translateY(-5px); }
+        body { font-family: 'IBM+Plex+Sans', sans-serif; background-color: #ffffff; color: #1e293b; }
+        h1, h2, .font-serif { font-family: 'Playfair Display', serif; }
+        .profile-frame { width: 140px; height: 140px; border-radius: 4px; object-fit: cover; }
+        .sidebar { background-color: #f8fafc; border-right: 1px solid #e2e8f0; }
+        .pub-item { border-left: 2px solid #e2e8f0; padding-left: 1rem; margin-bottom: 1.5rem; }
     </style>
 </head>
-<body class="p-6 md:p-16">
-    <header class="max-w-4xl mx-auto mb-16">
-        <h1 class="text-4xl font-bold mb-4">Professional <span class="gradient-text">ML Portfolio</span></h1>
-        <p class="text-lg text-slate-400 leading-relaxed">
-            Machine Learning Specialist (MSc Distinction, Aalto) & Research Alum (Blue Brain Project, EPFL). 
-            Expert in bridging <strong>Latent Variable Models</strong> and <strong>Generative Architectures</strong> with industrial leadership.
-        </p>
-    </header>
+<body class="flex flex-col md:flex-row min-h-screen">
 
-    <main class="max-w-4xl mx-auto space-y-12">
-        <!-- Featured Project Section -->
-        <section>
-            <h2 class="text-2xl font-semibold mb-6 flex items-center">
-                <span class="mr-2">🚀</span> Featured Implementations
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Project 1: The Attention Model -->
-                <a href="https://github.com[YOUR_USERNAME]/toy-transformer-attention" class="card p-6 block">
-                    <h3 class="text-xl font-bold text-sky-400 mb-2">Toy Transformer Attention</h3>
-                    <p class="text-sm text-slate-300 mb-4">Custom Self-Attention implementation for sequence prediction. Features learnable positional encoding and sliding window inference.</p>
-                    <span class="text-xs font-mono bg-slate-700 px-2 py-1 rounded text-sky-300">TensorFlow</span>
-                    <span class="text-xs font-mono bg-slate-700 px-2 py-1 rounded text-sky-300 ml-2">NLP</span>
-                </a>
-                
-                <!-- Placeholder for future HMM/SNA project -->
-                <div class="card p-6 opacity-60">
-                    <h3 class="text-xl font-bold mb-2">SNA & Influence Modeling</h3>
-                    <p class="text-sm text-slate-300">Advanced EM algorithms for social network analysis and latent variable estimation. (Repo Coming Soon)</p>
+    <!-- Sidebar: Personal Info & Contact -->
+    <aside class="sidebar w-full md:w-80 p-8 flex-shrink-0">
+        <img src="profile.jpg" alt="Profile" class="profile-frame mb-8 bg-gray-200">
+        
+        <h2 class="text-sm uppercase tracking-tighter font-semibold text-slate-500 mb-6">Contact & Links</h2>
+        <div class="space-y-4 text-sm mb-12">
+            <a href="mailto:your.email@example.com" class="block text-indigo-600 hover:underline">your.email@example.com</a>
+            <a href="https://github.com" class="block text-slate-700 hover:underline">GitHub Profile</a>
+        </div>
+
+        <h2 class="text-sm uppercase tracking-tighter font-semibold text-slate-500 mb-6">Foundations</h2>
+        <div class="text-sm space-y-4">
+            <div>
+                <p class="font-bold">MSc Computer Science</p>
+                <p class="text-slate-500 italic">Aalto University | Distinction</p>
+            </div>
+            <div>
+                <p class="font-bold">Research Fellowship</p>
+                <p class="text-slate-500 italic">Blue Brain Project (EPFL)</p>
+            </div>
+            <div>
+                <p class="font-bold">GSoC Developer</p>
+                <p class="text-slate-500 italic">Google Open Source</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-8 md:p-16 max-w-5xl">
+        <header class="mb-16">
+            <h1 class="text-4xl md:text-5xl mb-6">Technical Management & <br><span class="text-indigo-600">Machine Learning Theory</span></h1>
+            <p class="text-lg leading-relaxed text-slate-600 max-w-3xl">
+                Bridging theoretical AI foundations—from Social Network Analysis (SNA) to Non-linear Dynamical Systems—with high-stakes industrial project delivery. Specialist in LLM-integrated MVPs and generative architectures.
+            </p>
+        </header>
+
+        <section class="mb-20">
+            <h3 class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-8">Selected Industrial Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 border border-slate-100 bg-white shadow-sm rounded">
+                    <h4 class="font-bold text-indigo-900 mb-2">AI Automation Platform</h4>
+                    <p class="text-sm text-slate-600 mb-4 italic">Project Manager</p>
+                    <p class="text-sm text-slate-500">Directed a team of 6 engineers to integrate multi-model LLM APIs into a real-estate automation MVP.</p>
+                </div>
+                <div class="p-6 border border-slate-100 bg-white shadow-sm rounded">
+                    <h4 class="font-bold text-indigo-900 mb-2">Sports Analytics Engine</h4>
+                    <p class="text-sm text-slate-600 mb-4 italic">Technical Manager</p>
+                    <p class="text-sm text-slate-500">Managed spatial-temporal player tracking development, translating CV research into executable sprints.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Academic & Industrial DNA -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-slate-800 pt-12">
-            <div>
-                <h2 class="text-xl font-semibold mb-4 text-indigo-400">Core Expertise</h2>
-                <ul class="space-y-2 text-slate-300 text-sm">
-                    <li>• <strong>Generative AI:</strong> Transformers, Diffusion (DDPM)</li>
-                    <li>• <strong>Dynamical Systems:</strong> Parameter Estimation (Lorenz Attractor)</li>
-                    <li>• <strong>Management:</strong> Agile/Scrum, LLM-integrated MVPs</li>
-                </ul>
-            </div>
-            <div>
-                <h2 class="text-xl font-semibold mb-4 text-indigo-400">Background</h2>
-                <p class="text-sm text-slate-400 italic">
-                    "Between 2011 and recent industrial roles, I balanced high-level independent research with discrete consultancy, refining state-of-the-art HMM and GenAI competencies."
+        <section class="mb-20">
+            <h3 class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-8">Independent Research & Publications</h3>
+            <div class="space-y-6">
+                <div class="pub-item">
+                    <p class="text-sm font-semibold">Self-organizing map of nutrition, lifestyle and health situation in the world.</p>
+                    <p class="text-xs text-slate-500 mt-1">WSOM (Workshop on Self-Organizing Maps), 2011.</p>
+                </div>
+                <div class="pub-item">
+                    <p class="text-sm font-semibold">Comparing talks, realities and concerns over the climate change.</p>
+                    <p class="text-xs text-slate-500 mt-1">CLT (Conference on Language & Technology), 2012.</p>
+                </div>
+                <p class="text-sm text-slate-500 leading-relaxed italic bg-slate-50 p-4 rounded">
+                    "I maintain continuous implementation of state-of-the-art architectures (HMM, GenAI) to bridge the timeline between my early research and current industrial leadership roles."
                 </p>
             </div>
         </section>
+
+        <footer class="mt-20 pt-8 border-t border-slate-100 text-[10px] text-slate-400 uppercase tracking-[0.2em]">
+            AALTO DISTINCTION | EPFL RESEARCH | 2011 – 2026
+        </footer>
     </main>
 
-    <footer class="max-w-4xl mx-auto mt-20 pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
-        &copy; 2026 | Built for Professional Discretion & Technical Excellence
-    </footer>
 </body>
 </html>
