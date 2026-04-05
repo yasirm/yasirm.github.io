@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Your Name</title>
+    <script src="https://tailwindcss.com"></script>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fafafa; color: #1a1a1a; }
+        .nav-link { 
+            border-bottom: 2px solid transparent; 
+            transition: all 0.3s; 
+            text-decoration: none !important; 
+            white-space: nowrap;
+        }
+        .nav-link:hover { border-color: #6366f1; color: #1a1a1a; }
+        
+        /* Consistent card styling: sharp and surgical */
+        .project-card { 
+            background: #ffffff; 
+            border: 1px solid #e5e7eb; 
+            transition: border-color 0.2s; 
+        }
+        .project-card:hover { border-color: #6366f1; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation: Identical to index.html -->
+    <nav class="max-w-4xl mx-auto px-6 py-8 md:py-10 flex flex-wrap justify-between items-center gap-4">
+        <div class="font-bold text-xl tracking-tighter uppercase">YOUR NAME</div>
+        <div class="flex items-center gap-x-6 md:gap-x-8 text-[11px] font-semibold uppercase tracking-widest text-gray-500">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link text-black border-indigo-500">Projects</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-4 md:pt-10 pb-16">
+        <header class="mb-12 md:mb-16 border-b border-gray-100 pb-10">
+            <h1 class="text-3xl md:text-4xl font-semibold mb-5 tracking-tight">Open Source & Projects</h1>
+            <p class="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl">
+                Implementations of ML theory, from Social Network Analysis to generative architectures. Most repositories are in active development.
+            </p>
+        </header>
+
+        <!-- Project Grid: 2 columns on desktop, 1 on mobile -->
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+            
+            <!-- Project 1 -->
+            <div class="project-card p-6 rounded-xl">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="font-bold text-lg tracking-tight">AI Automation Platform</h2>
+                    <span class="text-[9px] uppercase tracking-widest font-bold bg-indigo-50 text-indigo-600 px-2 py-1 rounded">Active</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                    Integrated multi-model LLM APIs into a real-estate automation MVP. Directed a team of 6 engineers.
+                </p>
+                <div class="flex gap-4 items-center">
+                    <a href="https://github.com" class="text-[11px] uppercase tracking-widest font-bold text-indigo-600 hover:text-indigo-800">GitHub Repo →</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card p-6 rounded-xl">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="font-bold text-lg tracking-tight">SNA Visualization</h2>
+                    <span class="text-[9px] uppercase tracking-widest font-bold bg-gray-100 text-gray-500 px-2 py-1 rounded">Research</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                    Graph-based analysis tool for visualizing non-linear relationships in social networks.
+                </p>
+                <div class="flex gap-4 items-center">
+                    <a href="#" class="text-[11px] uppercase tracking-widest font-bold text-gray-400">Coming Soon</a>
+                </div>
+            </div>
+
+            <!-- Add more Project Cards as you move repos to public -->
+
+        </div>
+    </main>
+
+    <footer class="max-w-4xl mx-auto px-6 py-10 border-t border-gray-100 text-[9px] text-gray-400 tracking-[0.2em] uppercase">
+        © 2026 [Your Name]. All Rights Reserved. | Built with simplicity
+    </footer>
+
+</body>
+</html>
